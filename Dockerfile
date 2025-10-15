@@ -16,8 +16,8 @@ ENV KOMARI_SERVER="" \
 
 # 显示版本号，然后启动 komari-agent
 ENTRYPOINT ["/bin/sh", "-c", "\
-    echo 'Komari Agent Version:'; \
-    /app/komari-agent --version; \
+    echo 'Komari Agent help:'; \
+    /app/komari-agent --help; \
     if [ -z \"$KOMARI_SERVER\" ] || [ -z \"$KOMARI_TOKEN\" ]; then \
         echo 'Error: KOMARI_SERVER or KOMARI_TOKEN not set'; \
         exit 1; \
